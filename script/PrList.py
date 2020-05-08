@@ -103,6 +103,3 @@ class GithubPrList:
 
         tracemalloc.get_tracemalloc_memory()
         return prList
-
-    def tearDown(self):
-        self._gh.__requester.Requester.resetConnectionClasses()
