@@ -1,5 +1,6 @@
 from dingtalkchatbot.chatbot import DingtalkChatbot
 
+
 class DingdingBot:
 
     @property
@@ -14,4 +15,6 @@ class DingdingBot:
         :param msg: string
         :param atPerson: List of String, people's mobile phone number
         """
-        self._xiaoding.send_text(msg= msg, is_at_all=False, at_mobiles=list(atPerson))
+        self._xiaoding.send_text(msg=msg,
+                                 is_at_all=False,
+                                 ßat_mobiles=list(atPerson))
