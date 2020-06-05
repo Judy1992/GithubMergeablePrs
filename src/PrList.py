@@ -62,11 +62,11 @@ class GithubPrList:
         self._org = org
         self._repo = repo
 
-    def getMergablePrsCustomFilter(self,
-                                   filter=None,
-                                   sort=DEFAULT_PR_SORT,
-                                   order=DEFAULT_ORDER,
-                                   ):
+    def getMergablePrs(self,
+                       filter=None,
+                       sort=DEFAULT_PR_SORT,
+                       order=DEFAULT_ORDER,
+                       ):
         """
         :param filter: string
         :param order: string ('asc', 'desc')

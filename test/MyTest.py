@@ -23,21 +23,21 @@ class MyTest(unittest.TestCase):
     def test_GetMergablePrs(self):
         prList = GithubPrList(self.org,
                      self.repo,
-                     self.token).getMergablePrsCustomFilter()
+                     self.token).getMergablePrs()
         self.assertTrue(True)
 
     def test_GetMergablePrsCustomFilter(self):
         filter = self.FILTER_TEMPLATE.format(org=self.org, repo=self.repo)
         prList = GithubPrList(self.org,
                      self.repo,
-                     self.token).getMergablePrsCustomFilter(filter)
+                     self.token).getMergablePrs(filter)
         self.assertTrue(True)
 
     def test_sendPrMsgToDing(self):
         filter = self.FILTER_TEMPLATE.format(org=self.org, repo=self.repo)
         prList = GithubPrList(self.org,
                               self.repo,
-                              self.token).getMergablePrsCustomFilter(filter)
+                              self.token).getMergablePrs(filter)
 
         xiaoding = DingdingBot(self.dingWebHook)
 
