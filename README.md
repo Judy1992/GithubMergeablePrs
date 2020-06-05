@@ -6,14 +6,15 @@
 pip3 install pygithub
 ```
 
-2. If you want to integrate with Dingtalk, install `DingtalkChatbot`
+2. If you want to integrate with Dingtalk, install `DingtalkChatbot`.
 
 ```
 pip3 install pyDingtalkChatbot
 ```
 
-Config Dingtalk bot following the [tutorial](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) 
+Config Dingtalk bot following the [tutorial](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq).
 
+To see the usage example, please refer to [MyTest](test/MyTest.py) and replace the [config](test/config.ini) with your own value.
 
 FAQ: 
 

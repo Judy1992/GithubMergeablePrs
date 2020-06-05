@@ -18,6 +18,7 @@ class MyTest(unittest.TestCase):
         self.token = cp.get(githubSection, "token")
         self.dingWebHook = cp.get(dingSection, "dingWebHook")
         self.atPerson = cp.get(dingSection, "atPerson").split(",")
+        self.securitymsg = cp.get(dingSection, "securitymsg")
 
     def test_GetMergablePrs(self):
         GithubPrList(self.org,
@@ -42,7 +43,7 @@ class MyTest(unittest.TestCase):
 
         txt = ""
         if len(prList) > 0:
-            txt = 'pr to merg: \n' \
+            txt = self.securitymsg + ': \n' \
                   + '\n '.join([str(x) for x in prList]) \
                   + "\n"
 
