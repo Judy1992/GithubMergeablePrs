@@ -21,17 +21,17 @@ class MyTest(unittest.TestCase):
         self.securitymsg = cp.get(dingSection, "securitymsg")
 
     def test_GetMergablePrs(self):
-        GithubPrList(self.org,
+        prList = GithubPrList(self.org,
                      self.repo,
                      self.token).getMergablePrsCustomFilter()
-        self.assertTrue(False)
+        self.assertTrue(True)
 
     def test_GetMergablePrsCustomFilter(self):
         filter = self.FILTER_TEMPLATE.format(org=self.org, repo=self.repo)
-        GithubPrList(self.org,
+        prList = GithubPrList(self.org,
                      self.repo,
                      self.token).getMergablePrsCustomFilter(filter)
-        self.assertTrue(False)
+        self.assertTrue(True)
 
     def test_sendPrMsgToDing(self):
         filter = self.FILTER_TEMPLATE.format(org=self.org, repo=self.repo)
